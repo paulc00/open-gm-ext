@@ -3,7 +3,6 @@ searchGoogleMaps = function (word) {
   const query = word.selectionText;
 
   // console.log(query);
-  // If selection is empty, error
 
   if (query) {
     chrome.tabs.create({
@@ -11,6 +10,7 @@ searchGoogleMaps = function (word) {
         + query)
     });
   } else {
+    // If selection is empty, error
     alert("No address is selected. Please select an address before selecting Search Google Maps.");
   }
 };
