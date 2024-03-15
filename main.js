@@ -1,8 +1,8 @@
 searchGoogleMaps = function(word){
   const query = word.selectionText;
 
-  console.log(query);
-  // check if there is a comma after the street
+  // console.log(query);
+  // TODO: If selection is empty, error
 
   chrome.tabs.create({url: encodeURI("https://www.google.com/maps/search/?api=1&query="
 + query)});
