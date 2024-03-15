@@ -1,18 +1,26 @@
-searchGoogleMaps = function(word){
+
+searchGoogleMaps = function (word) {
   const query = word.selectionText;
 
   // console.log(query);
-  // TODO: If selection is empty, error
+  // If selection is empty, error
 
-  chrome.tabs.create({url: encodeURI("https://www.google.com/maps/search/?api=1&query="
-+ query)});
+  if (query) {
+    chrome.tabs.create({
+      url: encodeURI("https://www.google.com/maps/search/?api=1&query="
+        + query)
+    });
+  } else {
+    alert("No address is selected. Please select an address before selecting Search Google Maps.");
+  }
 };
 
-chrome.contextMenus.removeAll(function() {
+chrome.contextMenus.removeAll(function () {
   chrome.contextMenus.create({
-   id: "1",
-   title: "Search in Google Maps",
-   contexts:["selection"],  // ContextType
-  }); })
+    id: "1",
+    title: "Search in Google Maps",
+    contexts: ["selection"],  // ContextType
+  });
+})
 
 chrome.contextMenus.onClicked.addListener(searchGoogleMaps);
