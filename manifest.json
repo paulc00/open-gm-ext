@@ -1,0 +1,13 @@
+{
+  "name": "Open in Google Maps",
+  "description": "Open Google Maps with selected address",
+  "version": "1.0",
+  "manifest_version": 3,
+  "permissions": [
+      "contextMenus",
+      "tabs"
+  ],
+  "background": {
+      "service_worker": "main.js"
+  }
+}
