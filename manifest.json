@@ -1,6 +1,6 @@
 {
-  "name": "Open in Google Maps",
-  "description": "Open Google Maps with selected address",
+  "name": "Search in Google Maps",
+  "description": "Search Google Maps with selected address",
   "version": "1.0",
   "manifest_version": 3,
   "permissions": [

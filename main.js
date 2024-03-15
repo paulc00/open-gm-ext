@@ -11,7 +11,7 @@ searchGoogleMaps = function(word){
 chrome.contextMenus.removeAll(function() {
   chrome.contextMenus.create({
    id: "1",
-   title: "Open in Google Maps",
+   title: "Search in Google Maps",
    contexts:["selection"],  // ContextType
   }); })
 
