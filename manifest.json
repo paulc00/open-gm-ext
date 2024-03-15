@@ -1,6 +1,12 @@
 {
   "name": "Search in Google Maps",
   "description": "Search Google Maps with selected address",
+  "icons": {
+    "16": "earth_16.png",
+    "32": "earth_32.png",
+    "48": "earth_48.png",
+    "128": "earth_128.png"
+  },
   "version": "1.0",
   "manifest_version": 3,
   "permissions": [
